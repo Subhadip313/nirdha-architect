@@ -100,60 +100,7 @@ const Home = () => (
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
 
-    {/* About Me */}
-    <SectionWrapper id="about">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="section-heading">
-            About <span className="gradient-text">Me</span>
-          </h2>
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="glass-card p-8 md:p-12"
-        >
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center shrink-0 glow-border" style={{ background: "hsla(230, 30%, 12%, 0.9)" }}>
-              <User className="text-primary" size={48} />
-            </div>
-            <div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a Salesforce Technical Architect with over 15 years of experience designing and delivering enterprise-grade CRM solutions. I specialize in building scalable, secure, and cost-optimized Salesforce ecosystems that drive real business outcomes.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                From fintech startups to Fortune 500 companies, I've architected solutions spanning Sales Cloud, Service Cloud, Experience Cloud, and complex multi-cloud integrations. My approach combines deep technical expertise with a strategic mindset to ensure every architecture decision aligns with business goals.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </SectionWrapper>
-
-    {/* 5 Pillars */}
-    <SectionWrapper id="pillars">
-      <div className="text-center mb-14">
-        <h2 className="section-heading">
-          Built on <span className="gradient-text">5 Pillars</span>
-        </h2>
-        <p className="section-subtext">
-          Every solution I architect is grounded in these core principles.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        {pillars.map((p, i) => (
-          <GlassCard key={p.label} delay={i * 0.1} className="text-center">
-            <div className="mx-auto w-12 h-12 rounded-lg flex items-center justify-center mb-3" style={{ background: "hsla(197, 100%, 44%, 0.1)" }}>
-              <p.icon className="text-primary" size={24} />
-            </div>
-            <h3 className="font-bold text-foreground mb-1">{p.label}</h3>
-            <p className="text-sm text-muted-foreground">{p.desc}</p>
-          </GlassCard>
-        ))}
-      </div>
-    </SectionWrapper>
+    
 
     {/* Expertise Grid */}
     <SectionWrapper id="expertise">
@@ -254,6 +201,60 @@ const Home = () => (
             </div>
             <h3 className="font-semibold text-foreground mb-1">{c.title}</h3>
             <p className="text-sm text-muted-foreground">{c.desc}</p>
+          </GlassCard>
+        ))}
+      </div>
+    </SectionWrapper>
+    {/* About Me */}
+    <SectionWrapper id="about">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="section-heading">
+            About <span className="gradient-text">Me</span>
+          </h2>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="glass-card p-8 md:p-12"
+        >
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center shrink-0 glow-border" style={{ background: "hsla(230, 30%, 12%, 0.9)" }}>
+              <User className="text-primary" size={48} />
+            </div>
+            <div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                I'm a Salesforce Technical Architect with over 15 years of experience designing and delivering enterprise-grade CRM solutions. I specialize in building scalable, secure, and cost-optimized Salesforce ecosystems that drive real business outcomes.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                From fintech startups to Fortune 500 companies, I've architected solutions spanning Sales Cloud, Service Cloud, Experience Cloud, and complex multi-cloud integrations. My approach combines deep technical expertise with a strategic mindset to ensure every architecture decision aligns with business goals.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </SectionWrapper>    
+
+{/* 5 Pillars */}
+    <SectionWrapper id="pillars">
+      <div className="text-center mb-14">
+        <h2 className="section-heading">
+          Built on <span className="gradient-text">5 Pillars</span>
+        </h2>
+        <p className="section-subtext">
+          Every solution I architect is grounded in these core principles.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        {pillars.map((p, i) => (
+          <GlassCard key={p.label} delay={i * 0.1} className="text-center">
+            <div className="mx-auto w-12 h-12 rounded-lg flex items-center justify-center mb-3" style={{ background: "hsla(197, 100%, 44%, 0.1)" }}>
+              <p.icon className="text-primary" size={24} />
+            </div>
+            <h3 className="font-bold text-foreground mb-1">{p.label}</h3>
+            <p className="text-sm text-muted-foreground">{p.desc}</p>
           </GlassCard>
         ))}
       </div>
