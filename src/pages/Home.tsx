@@ -90,7 +90,7 @@ const Home = () => (
               Book a Consultation
             </a>
             <a href="#expertise" className="btn-secondary-glass text-base">
-              View Experties
+              View Expertise
             </a>
           </div>
         </motion.div>
@@ -275,21 +275,22 @@ const Home = () => (
         <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
           Ready to transform your Salesforce ecosystem? Let's start with a conversation.
         </p>
+        <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">Email: Nirmallya.salesforce11@gmail.com</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:hello@nirdha.com"
+            href="mailto:Nirmallya.salesforce11@gmail.com"
             className="btn-primary-glow text-base inline-flex items-center gap-2 justify-center"
           >
             <Mail size={18} />
             Book a Strategy Call
           </a>
-          <a
-            href="mailto:hello@nirdha.com"
+          {/* <a
+            href="mailto:Nirmallya.salesforce11@gmail.com"
             className="btn-secondary-glass text-base inline-flex items-center gap-2 justify-center"
           >
             Contact Me
             <ArrowRight size={18} />
-          </a>
+          </a> */}
         </div>
       </motion.div>
     </SectionWrapper>

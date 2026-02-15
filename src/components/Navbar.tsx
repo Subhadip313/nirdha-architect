@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { to: "#home", label: "Home" },
-  { to: "#about", label: "About" },
   { to: "#expertise", label: "Expertise" },
   { to: "#process", label: "Process" },
   { to: "#clients", label: "Clients" },
+  { to: "#about", label: "About" },
   { to: "#contact", label: "Contact" },
 ];
 
@@ -18,7 +18,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b" style={{ background: "hsla(230, 35%, 7%, 0.8)", borderColor: "hsla(230, 20%, 25%, 0.4)" }}>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#home" className="text-xl font-bold gradient-text tracking-tight">
-          Nirdha
+          Nirmallya 
+          <span className="text-foreground/60" > </span>
+          <span className="text-foreground/60"> Ghosh</span>
         </a>
 
         {/* Desktop */}
