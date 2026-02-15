@@ -96,35 +96,6 @@ const Home = () => (
         </motion.div>
       </div>
 
-      {/* Stats bar */}
-      <div className="absolute bottom-16 left-0 right-0 z-10">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
-          >
-            {stats.map((stat, i) => (
-              <div key={stat.label} className="glass-card p-4 md:p-6 text-center">
-                <p className="text-2xl md:text-3xl font-extrabold gradient-text mb-1">{stat.value}</p>
-                <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-        <div className="flex justify-center mt-6">
-          <motion.a
-            href="#about"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ChevronDown size={28} />
-          </motion.a>
-        </div>
-      </div>
-
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
