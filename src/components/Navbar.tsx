@@ -60,13 +60,28 @@ const Navbar = () => {
                 <a
                   key={link.to}
                   href={link.to}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    setOpen(false);
+                    // Let the menu close animation complete before scrolling
+                    setTimeout(() => {
+                      const element = document.querySelector(link.to);
+                      element?.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                  }}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 >
                   {link.label}
                 </a>
+
               ))}
-              <a href="#contact" onClick={() => setOpen(false)} className="btn-primary-glow text-sm text-center !py-2">
+              <a href="#contact" onClick={(e) => {
+                setOpen(false);
+                setTimeout(() => {
+                  const element = document.querySelector("#contact");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }, 300);
+              }} className="btn-primary-glow text-sm text-center !py-2">
+
                 Get in Touch
               </a>
             </div>
