@@ -89,8 +89,8 @@ const Home = () => (
             <a href="#contact" className="btn-primary-glow text-base">
               Book a Consultation
             </a>
-            <a href="#process" className="btn-secondary-glass text-base">
-              View Case Studies
+            <a href="#expertise" className="btn-secondary-glass text-base">
+              View Experties
             </a>
           </div>
         </motion.div>
