@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   // ✅ REQUIRED for GitHub Pages
   // Repo: https://github.com/Subhadip313/nirdha-architect-showcase
-  base: "/nirdha-architect/",
+  base: "/",
 
   server: {
     host: "::",
